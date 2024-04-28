@@ -116,7 +116,6 @@ class ProductItemDetails extends Component {
       {value => {
         const {productData, quantity, similarProductsData} = this.state
         const {
-          id,
           availability,
           brand,
           description,
@@ -126,7 +125,7 @@ class ProductItemDetails extends Component {
           title,
           totalReviews,
         } = productData
-        const {cartList, addCartItem, incrementCartItemQuantity} = value
+        const {addCartItem} = value
         const onClickAddToCart = () => {
           addCartItem({...productData, quantity})
         }
